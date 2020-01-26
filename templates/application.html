@@ -1,0 +1,73 @@
+{% load render_bundle from webpack_loader %}<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>TempPrecip</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.4/css/bulma.min.css">
+</head>
+
+<body>
+<div id="app">
+    <app>
+        <br/>
+        <h3 class="title column"><strong>   Zürich Temperature and Precipitation Data for Years 1864-2019</strong></h3>
+        <hr>
+
+        <!-- form starts here -->
+        <div class="column is-one-third">
+            <section class="form">
+                <form v-on:submit.prevent="$validator.validateAll(); console.log(form);">
+
+                    <div class="field">
+                        <label class="label">Starting Year:</label>
+                        <div class="control">
+                            <input v-model="form.start" class="input" type="text"
+                                   placeholder="Enter year after 1863">
+                        </div>
+                        <br />
+
+                        <div class="field">
+                            <label class="label">Ending Year:</label>
+                            <div class="control">
+                                <input v-model="form.end" class="input" type="text"
+                                       placeholder="Enter year before 2020">
+                            </div>
+                        </div>
+
+                        <br />
+
+                        <div class="field is-grouped">
+                            <div class="control">
+                                <button class="button is-primary">
+                                    Submit
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+            </section>
+        </div>
+        {% render_bundle 'app' %}<!-- built files will be auto injected -->
+
+        <script src=" https://unpkg.com/vue@2.4.4/dist/vue.js"></script>
+
+        <script>
+            new Vue({
+                el: '#app',
+                data: {
+                    form: {
+                        start: '',
+                        end: '',
+                    }
+                }
+            })
+        </script>
+
+</body>
+</html>
