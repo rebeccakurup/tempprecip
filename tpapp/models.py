@@ -1,4 +1,3 @@
-from django.conf import settings
 from django.db import models
 
 
@@ -22,7 +21,7 @@ class AppData(models.Model):
 
     # Magic string method formats post string display
     def __str__(self):
-        return f'ID: {self.id}  /  Year: {self.year}  /  Month: {self.month}  /  Temperature: {self.temperature}  /  Precipitation: {self.precipitation}'
+        return f'ID: {self.id}   |  Year: {self.year}   |   Month: {self.month}   |   Temperature: {self.temperature}   |  Precipitation: {self.precipitation}'
 
 
 

@@ -82,7 +82,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../PA/Taurus" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
@@ -140,7 +140,7 @@
       <workItem from="1579628690020" duration="680000" />
       <workItem from="1579977177851" duration="5915000" />
       <workItem from="1580047874764" duration="5807000" />
-      <workItem from="1580053726014" duration="5695000" />
+      <workItem from="1580053726014" duration="6462000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit for tpapp development version">
       <created>1579977237475</created>
@@ -173,11 +173,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="598" y="116" width="1241" height="807" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1579977543624" />
-    <state x="2660" y="277" key="FileChooserDialogImpl" timestamp="1580058848389">
+    <state x="2660" y="277" key="FileChooserDialogImpl" timestamp="1580063319616">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="277" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1580049085113" />
-    <state x="2660" y="277" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1580058848389" />
+    <state x="2660" y="277" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1580063319616" />
     <state x="740" y="277" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1579505260237" />
     <state width="1293" height="282" key="GridCell.Tab.0.bottom" timestamp="1579587716285">
       <screen x="0" y="0" width="1920" height="1040" />

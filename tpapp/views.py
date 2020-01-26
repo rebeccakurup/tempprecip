@@ -8,6 +8,7 @@ from tpapp.serializers import TpAppSerializer
 from tpapp.models import AppData
 
 
+# Test class for filtering years
 class ListRecordsByYearRange(ListAPIView):
     serializer_class = TpAppSerializer
 
@@ -28,6 +29,22 @@ class ListRecordsByYearURL(ListAPIView):
         end = self.kwargs['end']
         queryset = AppData.objects.filter(year__gte=start, year__lte=end)
         return queryset
+
+
+class ListRecordsByYearMonthURL(ListAPIView):
+    """
+    get:
+    Override get_queryset method to list all records in a year range
+    """
+    serializer_class = TpAppSerializer
+
+    def get_queryset(self):
+        month = self.kwargs['month']
+        start = self.kwargs['start']
+        end = self.kwargs['end']
+        queryset = AppData.objects.filter(year__gte=start, year__lte=end, month=month)
+        return queryset
+
 
 
 class ListCreateRecords(ListCreateAPIView):
