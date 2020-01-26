@@ -76,3 +76,6 @@ class ListCreateRecordsMonth(ListCreateAPIView):
         queryset = AppData.objects.filter(Q(month=query_param))
         return queryset
 
+
+
+

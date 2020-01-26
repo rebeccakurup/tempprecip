@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3920f9f4-42a6-4922-9ef5-ecd24f169662" name="Default Changelist" comment="Initial commit for tpapp development version" />
+    <list default="true" id="3920f9f4-42a6-4922-9ef5-ecd24f169662" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/yearOptionsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/webpack-stats.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/webpack-stats.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tpapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/tpapp/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,6 +61,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Python Script" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -86,13 +93,36 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Django server.tpdata">
+    <configuration name="years" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="tpdata" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tpapp" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tpapp/years.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="tpdata" type="Python.DjangoServer" factoryName="Django server">
       <module name="tpdata" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="tpdata.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -110,6 +140,11 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.years" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -141,6 +176,8 @@
       <workItem from="1579977177851" duration="5915000" />
       <workItem from="1580047874764" duration="5807000" />
       <workItem from="1580053726014" duration="6462000" />
+      <workItem from="1580067817056" duration="326000" />
+      <workItem from="1580076044495" duration="2416000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit for tpapp development version">
       <created>1579977237475</created>
@@ -149,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579977237475</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added view for filtering range of years by month">
+      <created>1580068076496</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1580068076496</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,7 +201,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit for tpapp development version" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit for tpapp development version" />
+    <MESSAGE value="Added view for filtering range of years by month" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added view for filtering range of years by month" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="181" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580049087141">
@@ -169,31 +214,36 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2610" y="269" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1579441465105" />
-    <state x="598" y="116" width="1241" height="807" key="CommitChangelistDialog2" timestamp="1579977543624">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2518" y="116" width="1241" height="807" key="CommitChangelistDialog2" timestamp="1580068075198">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="598" y="116" width="1241" height="807" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1579977543624" />
+    <state x="2518" y="116" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1580068075198" />
     <state x="2660" y="277" key="FileChooserDialogImpl" timestamp="1580063319616">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="277" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1580049085113" />
     <state x="2660" y="277" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1580063319616" />
     <state x="740" y="277" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1579505260237" />
-    <state width="1293" height="282" key="GridCell.Tab.0.bottom" timestamp="1579587716285">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="487" key="GridCell.Tab.0.bottom" timestamp="1580077687636">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="487" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1580077687636" />
     <state width="1293" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1579587716285" />
-    <state width="1293" height="282" key="GridCell.Tab.0.center" timestamp="1579587716284">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="487" key="GridCell.Tab.0.center" timestamp="1580077687636">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="487" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1580077687636" />
     <state width="1293" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1579587716284" />
-    <state width="1293" height="282" key="GridCell.Tab.0.left" timestamp="1579587716283">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="487" key="GridCell.Tab.0.left" timestamp="1580077687635">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="487" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1580077687635" />
     <state width="1293" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1579587716283" />
-    <state width="1293" height="282" key="GridCell.Tab.0.right" timestamp="1579587716285">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="487" key="GridCell.Tab.0.right" timestamp="1580077687636">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="487" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1580077687636" />
     <state width="1293" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1579587716285" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1579438940984">
       <screen x="1920" y="0" width="1920" height="1040" />
@@ -205,13 +255,17 @@
     <state x="463" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1580043301282" />
     <state x="2383" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1580054322728" />
     <state x="463" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1579629255414" />
-    <state x="552" y="255" key="Vcs.Push.Dialog.v2" timestamp="1579977246594">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2472" y="255" key="Vcs.Push.Dialog.v2" timestamp="1580068081523">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="255" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1579977246594" />
+    <state x="2472" y="255" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1580068081523" />
     <state x="2588" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1580053729320">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2588" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1580053729320" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/tempprecip$years.coverage" NAME="years Coverage Results" MODIFIED="1580077646512" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tpapp" />
   </component>
 </project>
