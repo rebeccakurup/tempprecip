@@ -14,12 +14,8 @@ urlpatterns = [
     path('api/', include('rest_framework.urls')),
     path('api/docs/', include_docs_urls(title='TempPrecip', public=False)),
 
-    # path("",
-    #      TemplateView.as_view(template_name="application.html"),
-    #      name="app",
-    #      ),
 
-    # Returns all records in reverse chronological order (newest to oldest)
+    # Returns all records in chronological order
     # Creates new record if user is logged in with POST method:
     # If user passes search string (i.e. api/?search=<str:search_string> ) returns search results of year field
     path('api/year/', ListCreateRecords.as_view()),
@@ -31,6 +27,7 @@ urlpatterns = [
     # If user passes search string (i.e. api/month/?search=<str:search_string> ) returns search results of month field
     path('api/month/', ListCreateRecordsMonth.as_view()),
 
+    # Test class endpoint
     path('api/year/range/', ListRecordsByYearRange.as_view())
 
 ]

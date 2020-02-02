@@ -34,7 +34,7 @@ class ListRecordsByYearURL(ListAPIView):
 class ListRecordsByYearMonthURL(ListAPIView):
     """
     get:
-    Override get_queryset method to list all records in a year range
+    Override get_queryset method to list all records in a year range for a particular month
     """
     serializer_class = TpAppSerializer
 
@@ -51,20 +51,14 @@ class ListCreateRecords(ListCreateAPIView):
     serializer_class = TpAppSerializer
 
     def get_queryset(self):
-        # If no search string passed in url returns all posts in reverse chronological order by year only, not months
+        # If no search string passed in url returns all posts in chronological order by year only, not months
         if not self.request.query_params.get('search', None):
-            return AppData.objects.order_by('year').reverse()
+            return AppData.objects.order_by('year')
 
         # If string passed in url is <   search  >    : searches year field using search parameter
         query_param = self.request.query_params['search']
         queryset = AppData.objects.filter(Q(year=query_param))
         return queryset
-
-        # If strings passed in url are <  start  > and <  end>   : filter records by range of years
-        # year_start = self.request.query_params['start']
-        #         # year_end = self.request.query_params['end']
-        #         # queryset = AppData.objects.filter(year=year_start, year=year_end)
-        #         # return queryset
 
 
 class ListCreateRecordsMonth(ListCreateAPIView):

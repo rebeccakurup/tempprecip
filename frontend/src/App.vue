@@ -1,11 +1,11 @@
 <template>
   <div id="app">
-    <h1>Zurich Monthly Average Precipitation and Temperature</h1>
-    <form @submit.prevent="submitYears">
+    <h1>Zürich Monthly Average Precipitation and Temperature</h1>
+    <form>
       <br/>
-      <label>Starting Year:</label>
+
 <!--      <input type="text" v-model="formData.start"/>-->
-      <select v-model="formData.start">
+      <label>Starting Year:</label><select v-model="formData.start">
         <option disabled value="">Please select one</option>
         <option>1864</option>
         <option>1865</option>
@@ -343,7 +343,46 @@
 <!--        </option>-->
 <!--      </select>-->
     </form>
-  </div>
+
+    <br/>
+<!--    <h1>Records</h1>-->
+
+
+<!--<table>-->
+
+<!--<thead>-->
+
+<!--<tr>-->
+
+
+<!--<th>Year</th>-->
+<!--<th>Month</th>-->
+<!--<th>Temperature</th>-->
+<!--<th>Precipitation</th>-->
+
+<!--</tr>-->
+<!--</thead>-->
+<!--<tbody>-->
+<!--<tr v-for="year in years">-->
+
+<!--<th>{ { year.year } }</th>-->
+
+<!--<th>{ { year.month } }</th>-->
+
+<!--<td>{ { year.temperature } }</td>-->
+
+<!--<td>{ { year.precipitation } } </td>-->
+
+<!--</tr>-->
+
+<!--</tbody>-->
+<!--</table>-->
+<div>
+</div>
+</div>
+
+
+
 </template>
 
 <script>
@@ -354,30 +393,56 @@
 //   }
 // ]
 
+
+
   import api from './api/index'
+import {APIService} from "./APIService";
+
+
+const API_URL = 'http://127.0.0.1:7000';
+const apiService = new APIService();
+
 export default {
   name: 'app',
   data () {
     return {
       msg: 'Welcome to TempPrecip',
+      years: [],
+      numberOfYears:0,
       formData: {
         start: '',
         end: '',
         //years
        // selected: ''
       }
+
     }
   },
   methods: {
-    submitYears () {
-      api.fetchData('get', null, this.formData).then(res => {
-          this.msg = 'Saved'
-        }).catch((e) => {
-          this.msg = e.response
+    getAllRecords: function () {
+      apiService.getAllRecords().then((data) => {
+
+        this.years = data.data;
+        this.numberOfYears = data.count;
       })
-    }
-  }
-}
+    },
+    },
+
+  mounted: function () {
+    this.getAllRecords();
+   },
+   }
+    // submitYears ()
+    //   {
+    //   api.fetchData('get', null, this.formData).then(res => {
+    //       this.msg = 'Saved'
+    //     }).catch((e) => {
+    //       this.msg = e.response
+    //   })
+  //       }
+  //   }
+  // }
+
 </script>
 
 <style lang="scss">
